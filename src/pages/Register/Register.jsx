@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import registerLottieData from "../../assets/lottie/register.json";
 import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
+import AuthContext from "../../context/AuthContext/AuthContext";
 
 export default function Register() {
+  const { createUserWithEmail, signInWithGoogle } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
 
     const form = e.target;
-    const name = form.name.value;
+    // const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
 
-    const user = { name, email, password };
-    console.log(user);
+    // const user = { name, email, password };
+    // console.log(user);
 
     // password validation
     const passwordRegex =
@@ -25,6 +27,29 @@ export default function Register() {
       );
       return;
     }
+
+    // create user with email and password
+    createUserWithEmail(email, password)
+      .then((result) => {
+        console.log("registered user", result.user);
+        alert("User registered successfully");
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error.message);
+      });
+  };
+  // sign in with google
+  const handleGoogleRegister = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log("Google Sign-In Success", result.user);
+        alert("Google Sign-In successful");
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error.message);
+      });
   };
   return (
     <div className="min-h-screen flex items-center justify-center p-2">
@@ -82,7 +107,11 @@ export default function Register() {
             </div>
 
             <div>
-              <button type="button" className="btn btn-outline w-full">
+              <button
+                type="button"
+                onClick={handleGoogleRegister}
+                className="btn btn-outline w-full"
+              >
                 <img
                   src="https://icon2.cleanpng.com/20240216/yhs/transparent-google-logo-google-logo-with-colorful-letters-on-black-1710875297222.webp"
                   alt="Google Logo"
