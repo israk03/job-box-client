@@ -55,7 +55,10 @@ export default function Navbar() {
         >
           Register
         </Link>
-        <a className="btn ml-4">Sign In</a>
+
+        <Link to="/login" className="btn ml-4">
+          Sign In
+        </Link>
       </div>
     </div>
   );

@@ -1,56 +1,21 @@
-import React from "react";
-import registerLottieData from "../../assets/lottie/register.json";
 import Lottie from "lottie-react";
+import React from "react";
+import loginLottieData from "../../assets/lottie/login.json";
 import { Link } from "react-router-dom";
 
-export default function Register() {
-  const handleRegister = (e) => {
+export default function Login() {
+  const handleLogin = (e) => {
     e.preventDefault();
-
-    const form = e.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const password = form.password.value;
-
-    const user = { name, email, password };
-    console.log(user);
-
-    // password validation
-    const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
-
-    if (!passwordRegex.test(password)) {
-      alert(
-        "Password must be at least 6 characters long and include uppercase, lowercase, number, and special character."
-      );
-      return;
-    }
   };
   return (
     <div className="min-h-screen flex items-center justify-center p-2">
       <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-2xl max-w-5xl w-full overflow-hidden">
-        <div className="w-full md:w-1/2 p-6">
-          <Lottie animationData={registerLottieData}></Lottie>
-        </div>
-
         <div className="w-full md:w-1/2 p-8 space-y-6">
           <h2 className="text-3xl font-bold text-center text-primary">
             Create an Account
           </h2>
 
-          <form onSubmit={handleRegister} className="space-y-4">
-            <div>
-              <label className="label">
-                <span className="label-text font-semibold">Full Name</span>
-              </label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter your full name"
-                className="input input-bordered w-full"
-                required
-              />
-            </div>
+          <form onSubmit={handleLogin} className="space-y-4">
             <div>
               <label className="label">
                 <span className="label-text font-semibold">Email</span>
@@ -77,7 +42,7 @@ export default function Register() {
             </div>
             <div>
               <button type="submit" className="btn btn-primary w-full">
-                Register
+                Login
               </button>
             </div>
 
@@ -92,15 +57,19 @@ export default function Register() {
               </button>
             </div>
             <p className="text-center">
-              Already have an account?{" "}
+              Didn't have an account?{" "}
               <Link
-                to="/login"
+                to="/register"
                 className="text-primary font-semibold hover:underline"
               >
-                Login here
+                Register
               </Link>
             </p>
           </form>
+        </div>
+
+        <div className="w-full md:w-1/2 p-6">
+          <Lottie animationData={loginLottieData}></Lottie>
         </div>
       </div>
     </div>
