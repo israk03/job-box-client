@@ -41,13 +41,20 @@ export default function Navbar() {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">JOB-BOX</a>
+        <Link to="/" className="btn btn-ghost text-xl">
+          JOB-BOX
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/register">Register</Link>
+        <Link
+          to="/register"
+          className="text-primary font-semibold hover:underline"
+        >
+          Register
+        </Link>
         <a className="btn ml-4">Sign In</a>
       </div>
     </div>
