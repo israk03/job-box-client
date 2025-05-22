@@ -19,11 +19,11 @@ The purpose of this project is to assess skills, creativity, and problem-solving
 
 ## 🖌️ Application Pages
 
-###Public Pages
+### Public Pages
 
 - Home Page (/): Displays available job within deadline postings with essential information and dynamic routing to job details.
 
-###Protected Pages
+### Protected Pages
 
 - All Jobs (/jobs): View all jobs, search, filter, and sort by deadline.
 - Job Details (/jobs/details/:id): Detailed job information and application options.
