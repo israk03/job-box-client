@@ -1,18 +1,37 @@
-# 🔐 Job Box Authentication
+# 🔐 Job Box: A JOB PORTAL SYSTEM
 
-A simple and secure user authentication system built with **React**, **Firebase**, **TailwindCSS**, and **Lottie**. Users can register using email/password or Google Sign-In.
+A comprehensive job portal platform designed to enable seamless interaction between job seekers and employers. The system provides full CRUD operations for managing job postings, user authentication, and streamlined job application processes.
 
-## ✅ Features
+## 🌟 Project Purpose
 
-- 🔐 Register with Email and Password
-- 🔁 Sign in with Google
-- 🧪 Password Validation (Uppercase, Lowercase, Number, Special Character, Min 6 chars)
-- 🖼️ Lottie Animations
-- 🧠 React Context API for Auth State
-- 📱 Responsive UI with TailwindCSS + DaisyUI
-- 🧭 Routing with React Router DOM
+The purpose of this project is to assess skills, creativity, and problem-solving abilities while providing an efficient recruitment and job application experience.
 
-## 🧰 Tech Stack
+## 💡 Key Features
+
+- Responsive Design: Fully responsive across mobile, tablet, and desktop.
+- Authentication System: Email/password login, Google login, account recovery, and protected routes.
+- Job Management: Add, update, delete, and view job postings.
+- Job Search & Filters: Search jobs by title and filter by job type, experience level, and salary range.
+- Job Applications: Apply for jobs with detailed forms and manage your applications.
+- Employer Tools: Employers can review applications, update jobs, and manage postings.
+- Error Handling: User-friendly error messages and loading indicators.
+- Session Management: Secure session management with JWT tokens.
+
+## 📂 Architecture
+
+Navbar: Includes company logo, navigation links, user info, and authentication controls.
+Footer: Displays company information, policies, and social links.
+Dynamic Routing: Main section renders pages based on routes.
+
+## 🛠️ Technologies Used
+
+Frontend: React.js, Tailwind CSS, DaisyUI
+Backend: Node.js, Express.js
+Database: MongoDB
+Authentication: Firebase Auth, Google Authentication
+Version Control: GitHub
+
+# 🧰 Tech Stack
 
 - React.js
 - Firebase Authentication
