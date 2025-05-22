@@ -31,7 +31,7 @@ Database: MongoDB
 Authentication: Firebase Auth, Google Authentication
 Version Control: GitHub
 
-# 🧰 Tech Stack
+### 🧰 Tech Stack
 
 - React.js
 - Firebase Authentication
