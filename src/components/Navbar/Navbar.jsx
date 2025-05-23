@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -41,8 +40,9 @@ export default function Navbar() {
             {links}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-xl">
-          JOB-BOX
+        {/* here is the logo part */}
+        <Link to="/" className="btn btn-ghost text-xl hidden lg:block">
+          <img className="h-12 w-10" src="/src/assets/JOBBOX_LOGO.png" alt="" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

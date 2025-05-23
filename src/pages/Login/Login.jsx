@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import loginLottieData from "../../assets/lottie/login.json";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext/AuthContext";
@@ -9,7 +9,7 @@ export default function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
-    // const name = form.name.value;
+
     const email = form.email.value;
     const password = form.password.value;
 
@@ -23,7 +23,6 @@ export default function Login() {
         alert(error.message);
       });
   };
-  // sign in with google
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then((result) => {
