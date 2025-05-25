@@ -42,7 +42,11 @@ export default function Navbar() {
         </div>
         {/* here is the logo part */}
         <Link to="/" className="btn btn-ghost text-xl hidden lg:block">
-          <img className="h-12 w-10" src="/src/assets/JOBBOX_LOGO.png" alt="" />
+          <img
+            className="h-12 w-10"
+            src="/src/assets/JOBBOX_LOGO.png"
+            alt="JobBox Logo"
+          />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -51,7 +55,7 @@ export default function Navbar() {
       <div className="navbar-end">
         <Link
           to="/register"
-          className="text-primary font-semibold hover:underline"
+          className="text-primary font-semibold hover:underline "
         >
           Register
         </Link>
